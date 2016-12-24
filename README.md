@@ -1,8 +1,5 @@
 <img src="https://github.com/hchbaw/auto-fu.zsh/raw/readme/auto-fu.gif" />
 
-<pre>
-zsh automatic complete-word and list-choices
-
 ## 下载auto-fu.zsh
 ``
 cd ~/.oh-my-zsh/custom/plugins
@@ -26,6 +23,10 @@ zle-line-init () {auto-fu-init;}; zle -N zle-line-init
 ``
 source ~/.zshrc
 ``
+
+<pre>
+zsh automatic complete-word and list-choices
+
 Originally incr-0.2.zsh
 Incremental completion for zsh
 by y.fujii &lt;y-fujii at mimosa-pudica.net&gt;
