@@ -3,6 +3,29 @@
 <pre>
 zsh automatic complete-word and list-choices
 
+## 下载auto-fu.zsh
+``
+cd ~/.oh-my-zsh/custom/plugins
+git clone https://github.com/hchbaw/auto-fu.zsh.git auto-fu
+``
+## 执行zcompile
+``
+A=~/.oh-my-zsh/custom/plugins/auto-fu/auto-fu.zsh; (zsh -c "source $A ; auto-fu-zcompile $A ~/.zsh")
+``
+## 添加下面的设置到zshrc中
+``
+## auto-fu.zsh stuff.
+# source ~/.oh-my-zsh/custom/plugins/auto-fu/auto-fu.zsh
+{ . ~/.zsh/auto-fu; auto-fu-install; }
+zstyle ':auto-fu:highlight' input bold
+zstyle ':auto-fu:highlight' completion fg=black,bold
+zstyle ':auto-fu:var' postdisplay $'\n-azfu-'
+zle-line-init () {auto-fu-init;}; zle -N zle-line-init
+``
+## 重新编译zshrc
+``
+source ~/.zshrc
+``
 Originally incr-0.2.zsh
 Incremental completion for zsh
 by y.fujii &lt;y-fujii at mimosa-pudica.net&gt;
